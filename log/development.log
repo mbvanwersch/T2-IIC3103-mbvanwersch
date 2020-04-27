@@ -1,0 +1,1448 @@
+  [1m[35m (257.9ms)[0m  [1m[35mCREATE DATABASE "myapi_development" ENCODING = 'unicode'[0m
+  [1m[35m (135.8ms)[0m  [1m[35mCREATE DATABASE "myapi_test" ENCODING = 'unicode'[0m
+  [1m[35m (23.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (25.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427174459)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "id_hamburguesa" integer, "nombre" character varying, "precio" integer, "descripcion" text, "imagen" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427174459"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateIngredientes (20200427174532)
+  [1m[35m (6.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (23.0ms)[0m  [1m[35mCREATE TABLE "ingredientes" ("id" bigserial primary key, "id_ingrediente" integer, "nombre" character varying, "descripcion" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427174532"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateHamburguesaIngredientes (20200427174557)
+  [1m[35m (6.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "hamburguesa_ingredientes" ("id" bigserial primary key, "id_hamburguesa" integer, "id_ingrediente_integer" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427174557"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-27 17:46:13.121165"], ["updated_at", "2020-04-27 17:46:13.121165"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started POST "/hamburguesa" for ::1 at 2020-04-27 14:11:20 -0400
+Started GET "/" for ::1 at 2020-04-27 14:16:43 -0400
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HamburguesasController#index as HTML
+Completed 204 No Content in 5ms (ActiveRecord: 0.0ms | Allocations: 507)
+
+
+Started GET "/" for ::1 at 2020-04-27 14:16:48 -0400
+Processing by HamburguesasController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 39)
+
+
+Started GET "/" for ::1 at 2020-04-27 14:16:57 -0400
+Processing by HamburguesasController#index as HTML
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 39)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 14:17:01 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:7:in `create'
+  [1m[36mHamburguesa Create (3.2ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "De la casa"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 18:17:01.152780"], ["updated_at", "2020-04-27 18:17:01.152780"]]
+  ↳ app/controllers/hamburguesas_controller.rb:7:in `create'
+  [1m[35m (3.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:7:in `create'
+Completed 200 OK in 57ms (Views: 0.3ms | ActiveRecord: 49.8ms | Allocations: 7083)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 14:17:12 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 33)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 14:18:57 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:17:in `show'
+Completed 204 No Content in 53ms (ActiveRecord: 1.1ms | Allocations: 2211)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 14:21:55 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+Completed 200 OK in 26ms (Views: 0.4ms | ActiveRecord: 19.1ms | Allocations: 5211)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 14:23:57 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+Completed 204 No Content in 0ms (ActiveRecord: 2.5ms | Allocations: 78)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 14:24:44 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[36mIngrediente Create (6.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"], ["created_at", "2020-04-27 18:24:44.232090"], ["updated_at", "2020-04-27 18:24:44.232090"]]
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 34ms (Views: 0.2ms | ActiveRecord: 17.3ms | Allocations: 5578)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/ingredientes_controller.rb:14:in `create'
+Started POST "/ingrediente" for ::1 at 2020-04-27 14:26:35 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[36mIngrediente Create (25.9ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"], ["created_at", "2020-04-27 18:26:35.110590"], ["updated_at", "2020-04-27 18:26:35.110590"]]
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 27.1ms | Allocations: 2235)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "ingredientes_pkey"
+DETAIL:  Key (id)=(5) already exists.
+):
+  
+app/controllers/ingredientes_controller.rb:8:in `create'
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 14:26:46 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (1.1ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:18:in `show'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 1.1ms | Allocations: 776)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 14:33:15 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 500 Internal Server Error in 14ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 4194)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/ingredientes_controller.rb:19:in `show'
+Started DELETE "/ingrediente/5" for ::1 at 2020-04-27 14:33:48 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (9.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:23:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:24:in `destroy'
+  [1m[36mIngrediente Destroy (4.2ms)[0m  [1m[31mDELETE FROM "ingredientes" WHERE "ingredientes"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/ingredientes_controller.rb:24:in `destroy'
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:24:in `destroy'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 22.0ms | Allocations: 2271)
+
+
+Started DELETE "/ingrediente/5" for ::1 at 2020-04-27 14:34:16 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:23:in `destroy'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.5ms | Allocations: 605)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ingrediente with 'id'=5):
+  
+app/controllers/ingredientes_controller.rb:23:in `destroy'
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 14:39:06 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 49.4ms | Allocations: 779)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ingrediente with 'id'=5):
+  
+app/controllers/ingredientes_controller.rb:17:in `show'
+Started POST "/ingrediente" for ::1 at 2020-04-27 14:39:12 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[36mIngrediente Create (1.8ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"], ["created_at", "2020-04-27 18:39:12.257983"], ["updated_at", "2020-04-27 18:39:12.257983"]]
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+Completed 201 Created in 29ms (Views: 0.2ms | ActiveRecord: 9.4ms | Allocations: 5405)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 14:39:35 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (1.8ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 200 OK in 32ms (Views: 0.2ms | ActiveRecord: 30.2ms | Allocations: 4063)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 14:39:46 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 650)
+
+
+Started DELETE "/ingrediente/5" for ::1 at 2020-04-27 14:39:50 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (7.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:22:in `destroy'
+  [1m[35m (16.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:23:in `destroy'
+  [1m[36mIngrediente Destroy (0.6ms)[0m  [1m[31mDELETE FROM "ingredientes" WHERE "ingredientes"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/ingredientes_controller.rb:23:in `destroy'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:23:in `destroy'
+Completed 200 OK in 37ms (Views: 0.3ms | ActiveRecord: 30.9ms | Allocations: 2252)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 15:09:16 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[36mIngrediente Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"], ["created_at", "2020-04-27 19:09:17.237659"], ["updated_at", "2020-04-27 19:09:17.237659"]]
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:8:in `create'
+Completed 201 Created in 18ms (Views: 0.3ms | ActiveRecord: 6.8ms | Allocations: 5416)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 15:09:23 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 200 OK in 4ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 914)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 15:09:58 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+Completed 200 OK in 20ms (Views: 10.5ms | ActiveRecord: 32.5ms | Allocations: 4221)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 15:12:57 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (1.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 6.3ms | Allocations: 4001)
+
+
+Started GET "/ingrediente/5" for ::1 at 2020-04-27 15:18:57 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>"5", "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (11.7ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:17:in `show'
+[active_model_serializers] Rendered IngredienteSerializer with ActiveModelSerializers::Adapter::Attributes (0.89ms)
+Completed 200 OK in 141ms (Views: 70.5ms | ActiveRecord: 37.5ms | Allocations: 7423)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 15:19:05 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Cheddar", "descripcion"=>"Cheddar de la mejor calidad"}}
+  [1m[36mIngrediente Load (12.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 17ms (Views: 3.9ms | ActiveRecord: 12.4ms | Allocations: 1084)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (26.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:30:34 -0400
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (12.9ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (17.95ms)
+Completed 500 Internal Server Error in 150ms (ActiveRecord: 45.2ms | Allocations: 11286)
+
+
+  
+NoMethodError (undefined method `hamburguesa_ingredientes' for #<Hamburguesa:0x00007fe626dd4870>):
+  
+app/controllers/hamburguesas_controller.rb:4:in `index'
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:31:48 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (2.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (31.73ms)
+Completed 500 Internal Server Error in 88ms (ActiveRecord: 11.1ms | Allocations: 8044)
+
+
+  
+NoMethodError (undefined method `hamburguesa_ingredientes' for #<Hamburguesa:0x00007fe627955820>):
+  
+app/controllers/hamburguesas_controller.rb:4:in `index'
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:32:14 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.9ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.69ms)
+Completed 500 Internal Server Error in 54ms (ActiveRecord: 5.2ms | Allocations: 8044)
+
+
+  
+NoMethodError (undefined method `hamburguesa_ingredientes' for #<Hamburguesa:0x00007fe6271ce818>):
+  
+app/controllers/hamburguesas_controller.rb:4:in `index'
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:32:27 -0400
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (14.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (20.54ms)
+Completed 500 Internal Server Error in 128ms (ActiveRecord: 36.3ms | Allocations: 10410)
+
+
+  
+NoMethodError (undefined method `hamburguesa_ingredientes' for #<Hamburguesa:0x00007fccec03da48>):
+  
+app/controllers/hamburguesas_controller.rb:4:in `index'
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:32:51 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.21ms)
+Completed 200 OK in 24ms (Views: 18.4ms | ActiveRecord: 7.3ms | Allocations: 5880)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:33:13 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Juicy Lucy", "precio"=>7000, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Juicy Lucy", "precio"=>7000, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (24.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[36mHamburguesa Create (15.7ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Juicy Lucy"], ["precio", 7000], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 19:33:13.970174"], ["updated_at", "2020-04-27 19:33:13.970174"]]
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[35m (20.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 201 Created in 87ms (Views: 15.8ms | ActiveRecord: 60.5ms | Allocations: 4091)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:33:23 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Berni", "precio"=>7500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Berni", "precio"=>7500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (1.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[36mHamburguesa Create (1.5ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Berni"], ["precio", 7500], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 19:33:23.316467"], ["updated_at", "2020-04-27 19:33:23.316467"]]
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 201 Created in 19ms (Views: 0.8ms | ActiveRecord: 10.1ms | Allocations: 2268)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:33:34 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[36mHamburguesa Create (0.6ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "La maestranza"], ["precio", 5500], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 19:33:34.154874"], ["updated_at", "2020-04-27 19:33:34.154874"]]
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 17ms (Views: 0.6ms | ActiveRecord: 7.3ms | Allocations: 2289)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:33:37 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.51ms)
+Completed 200 OK in 9ms (Views: 6.9ms | ActiveRecord: 1.5ms | Allocations: 1534)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 15:33:50 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"3", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (5.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.11ms)
+Completed 200 OK in 47ms (Views: 16.3ms | ActiveRecord: 6.1ms | Allocations: 2527)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 15:33:55 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (54.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.52ms)
+Completed 200 OK in 59ms (Views: 2.4ms | ActiveRecord: 54.0ms | Allocations: 695)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:34:09 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1532)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 15:34:15 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (18.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Class (0.05ms)
+Completed 200 OK in 20ms (Views: 0.6ms | ActiveRecord: 18.1ms | Allocations: 695)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 15:34:35 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5500, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.4ms)
+Completed 200 OK in 17ms (Views: 3.6ms | ActiveRecord: 6.2ms | Allocations: 5622)
+
+
+Started PATCH "/hamburguesa/2" for ::1 at 2020-04-27 15:35:18 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "hamburguesa"=>{"nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.9ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:23:in `update'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+  [1m[36mHamburguesa Update (0.4ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "precio" = $2, "updated_at" = $3 WHERE "hamburguesas"."id" = $4[0m  [["nombre", "De la casa XL"], ["precio", 5990], ["updated_at", "2020-04-27 19:35:18.835842"], ["id", 2]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 14ms (Views: 0.7ms | ActiveRecord: 7.7ms | Allocations: 2983)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 15:35:22 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "hamburguesa"=>{"nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.52ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.6ms | Allocations: 805)
+
+
+Started PATCH "/hamburguesa/2" for ::1 at 2020-04-27 15:36:22 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"id"=>"2", "nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"id"=>"2", "nombre"=>"De la casa XL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (11.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:23:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 15ms (Views: 0.9ms | ActiveRecord: 11.1ms | Allocations: 843)
+
+
+Started PATCH "/hamburguesa/2" for ::1 at 2020-04-27 15:36:33 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"id"=>"2", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"id"=>"2", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:23:in `update'
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+  [1m[36mHamburguesa Update (2.0ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "De la casa XXL"], ["updated_at", "2020-04-27 19:36:33.886836"], ["id", 2]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.32ms)
+Completed 200 OK in 22ms (Views: 1.5ms | ActiveRecord: 10.6ms | Allocations: 2789)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 15:36:39 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"2", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"id"=>"2", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 806)
+
+
+Started GET "/hamburguesa/5" for ::1 at 2020-04-27 15:36:42 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"5", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"id"=>"5", "nombre"=>"De la casa XXL", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:18:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.4ms | Allocations: 613)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hamburguesa with 'id'=5):
+  
+app/controllers/hamburguesas_controller.rb:18:in `show'
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:45:46 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 400 Bad Request in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 359)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:47:03 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers]   [1m[36mHamburguesa Load (1.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (31.87ms)
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 53.5ms | Allocations: 6368)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:47:23 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers]   [1m[36mHamburguesa Load (1.9ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (25.35ms)
+Completed 200 OK in 28ms (Views: 19.3ms | ActiveRecord: 11.4ms | Allocations: 6264)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:47:40 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers]   [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (46.18ms)
+Completed 200 OK in 48ms (Views: 42.8ms | ActiveRecord: 12.5ms | Allocations: 6312)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:47:54 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers]   [1m[36mHamburguesa Load (108.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (143.71ms)
+Completed 200 OK in 147ms (Views: 33.2ms | ActiveRecord: 121.8ms | Allocations: 6275)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:49:21 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.51ms)
+Completed 400 Bad Request in 4ms (Views: 3.5ms | ActiveRecord: 4.1ms | Allocations: 370)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:49:38 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Top burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Top burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:9:in `create'
+  [1m[36mHamburguesa Create (2.6ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Top burger"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 19:49:38.365604"], ["updated_at", "2020-04-27 19:49:38.365604"]]
+  ↳ app/controllers/hamburguesas_controller.rb:9:in `create'
+  [1m[35m (10.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.38ms)
+Completed 201 Created in 41ms (Views: 0.9ms | ActiveRecord: 21.8ms | Allocations: 6820)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:50:22 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Top burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Top burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers]   [1m[36mHamburguesa Load (9.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (16.91ms)
+Completed 200 OK in 18ms (Views: 7.8ms | ActiveRecord: 9.6ms | Allocations: 1909)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:54:52 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (0.9ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Top burger ganadora"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 19:54:52.683219"], ["updated_at", "2020-04-27 19:54:52.683219"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 201 Created in 56ms (Views: 10.3ms | ActiveRecord: 11.6ms | Allocations: 7041)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 15:55:06 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 400 Bad Request in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Started GET "/hamburguesa/4" for ::1 at 2020-04-27 15:55:14 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"4", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.82ms)
+Completed 200 OK in 40ms (Views: 1.9ms | ActiveRecord: 4.0ms | Allocations: 951)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 15:55:19 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (9.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.63ms)
+Completed 200 OK in 16ms (Views: 5.2ms | ActiveRecord: 9.7ms | Allocations: 1828)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 15:56:26 -0400
+  
+SyntaxError (/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:58: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/hamburguesas_controller.rb:58: syntax error, unexpected end-of-input, expecting end
+app/controllers/hamburguesas_controller.rb:58: syntax error, unexpected end-of-input, expecting end
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 15:56:37 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+  [1m[36mCACHE Hamburguesa Load (0.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.41ms)
+Completed 200 OK in 31ms (Views: 7.5ms | ActiveRecord: 9.9ms | Allocations: 6047)
+
+
+Started GET "/hamburguesa/10" for ::1 at 2020-04-27 15:56:40 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"10", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 1.8ms | Allocations: 610)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hamburguesa with 'id'=10):
+  
+app/controllers/hamburguesas_controller.rb:24:in `show'
+Started GET "/hamburguesa/10" for ::1 at 2020-04-27 16:01:09 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"10", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.8ms)
+Completed 404 Not Found in 24ms (Views: 6.0ms | ActiveRecord: 18.8ms | Allocations: 1021)
+
+
+Started DELETE "/hamburguesa/10" for ::1 at 2020-04-27 16:01:49 -0400
+Processing by HamburguesasController#destroy as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"10", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:43:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.29ms)
+Completed 404 Not Found in 14ms (Views: 2.2ms | ActiveRecord: 7.1ms | Allocations: 1013)
+
+
+Started DELETE "/hamburguesa/1" for ::1 at 2020-04-27 16:01:58 -0400
+Processing by HamburguesasController#destroy as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:43:in `destroy'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:44:in `destroy'
+  [1m[36mHamburguesa Destroy (0.8ms)[0m  [1m[31mDELETE FROM "hamburguesas" WHERE "hamburguesas"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:44:in `destroy'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:44:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.44ms)
+Completed 200 OK in 52ms (Views: 1.7ms | ActiveRecord: 8.9ms | Allocations: 6737)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 16:02:04 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Top burger ganadora", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 404 Not Found in 4ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 699)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:07:55 -0400
+  
+SyntaxError (/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:33: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+    contador := 0
+              ^
+/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:38: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+        contador := contador + 1
+                  ^
+/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:44: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+        contador := contador + 1
+                  ^
+/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:50: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+       contador := contador + 1
+                 ^
+/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:56: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+        contador := contador + 1
+                  ^):
+  
+app/controllers/hamburguesas_controller.rb:33: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:38: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:44: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:50: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:56: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:33: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:38: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:44: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:50: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+app/controllers/hamburguesas_controller.rb:56: syntax error, unexpected '=', expecting tSTRING_CONTENT or tSTRING_DBEG or tSTRING_DVAR or tSTRING_END
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:08:58 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "id"=>"3", "hamburguesa"=>{"nombre"=>"Top burger ganadora"}}
+  [1m[36mHamburguesa Load (1.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.43ms)
+Completed 200 OK in 50ms (Views: 15.3ms | ActiveRecord: 89.0ms | Allocations: 5701)
+
+
+Started PATCH "/hamburguesa/3" for ::1 at 2020-04-27 16:09:04 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "id"=>"3", "hamburguesa"=>{"nombre"=>"Top burger ganadora"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:32:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+  [1m[36mHamburguesa Update (0.9ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "Top burger ganadora"], ["updated_at", "2020-04-27 20:09:04.294914"], ["id", 3]]
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 37ms (Views: 0.9ms | ActiveRecord: 15.2ms | Allocations: 2922)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:09:09 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Top burger ganadora", "id"=>"3", "hamburguesa"=>{"nombre"=>"Top burger ganadora"}}
+  [1m[36mHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 801)
+
+
+Started PATCH "/hamburguesa/3" for ::1 at 2020-04-27 16:09:25 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"precio"=>10000, "id"=>"3", "hamburguesa"=>{"precio"=>10000}}
+  [1m[36mHamburguesa Load (1.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:32:in `update'
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Update (3.0ms)[0m  [1m[33mUPDATE "hamburguesas" SET "precio" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["precio", 10000], ["updated_at", "2020-04-27 20:09:25.495216"], ["id", 3]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[35m (14.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 200 OK in 29ms (Views: 0.7ms | ActiveRecord: 19.9ms | Allocations: 2772)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:09:28 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"precio"=>10000, "id"=>"3", "hamburguesa"=>{"precio"=>10000}}
+  [1m[36mHamburguesa Load (28.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (1.44ms)
+Completed 200 OK in 32ms (Views: 2.4ms | ActiveRecord: 28.1ms | Allocations: 799)
+
+
+Started PATCH "/hamburguesa/3" for ::1 at 2020-04-27 16:09:37 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"hola"=>10000, "id"=>"3", "hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:32:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 400 Bad Request in 3ms (Views: 0.7ms | ActiveRecord: 0.6ms | Allocations: 713)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:09:59 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+"nombre": "La famosa",
+"precio": 5000,
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:10:07 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+"nombre": "La famosa",
+"precio": 5000,
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+Started PATCH "/hamburguesa/3" for ::1 at 2020-04-27 16:10:15 -0400
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+  
+ActionDispatch::Http::Parameters::ParseError (767: unexpected token at '{
+"nombre": "La famosa",
+"precio": 5000,
+}'):
+  
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:115:in `rescue in parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:111:in `parse_formatted_parameters'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:381:in `block in POST'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch'
+rack (2.2.2) lib/rack/request.rb:69:in `fetch_header'
+actionpack (6.0.2.2) lib/action_dispatch/http/request.rb:380:in `POST'
+actionpack (6.0.2.2) lib/action_dispatch/http/parameters.rb:55:in `parameters'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:279:in `_wrapper_enabled?'
+actionpack (6.0.2.2) lib/action_controller/metal/params_wrapper.rb:244:in `process_action'
+activerecord (6.0.2.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.2.2) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:191:in `dispatch'
+actionpack (6.0.2.2) lib/action_controller/metal.rb:252:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:51:in `dispatch'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.2.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.2.2) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.2.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.2) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.2) lib/rack/head.rb:12:in `call'
+activerecord (6.0.2.2) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.2.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Error occurred while parsing request parameters.
+Contents:
+
+{
+"nombre": "La famosa",
+"precio": 5000,
+}
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:10:30 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La famosa", "precio"=>5000, "id"=>"3", "hamburguesa"=>{"nombre"=>"La famosa", "precio"=>5000}}
+  [1m[36mHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.53ms)
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 1.3ms | Allocations: 802)
+
+
+Started PATCH "/hamburguesa/3" for ::1 at 2020-04-27 16:10:35 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La famosa", "precio"=>5000, "id"=>"3", "hamburguesa"=>{"nombre"=>"La famosa", "precio"=>5000}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:32:in `update'
+  [1m[35m (4.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+  [1m[36mHamburguesa Update (0.6ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "La famosa"], ["updated_at", "2020-04-27 20:10:35.898482"], ["id", 3]]
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:35:in `update'
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Update (0.5ms)[0m  [1m[33mUPDATE "hamburguesas" SET "precio" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["precio", 5000], ["updated_at", "2020-04-27 20:10:35.916848"], ["id", 3]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 32ms (Views: 0.8ms | ActiveRecord: 9.9ms | Allocations: 4811)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:10:39 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"La famosa", "precio"=>5000, "id"=>"3", "hamburguesa"=>{"nombre"=>"La famosa", "precio"=>5000}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:24:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.45ms)
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.5ms | Allocations: 801)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-27 16:10:52 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La famosa", "precio"=>5000, "id"=>"10", "hamburguesa"=>{"nombre"=>"La famosa", "precio"=>5000}}
+  [1m[36mHamburguesa Load (13.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:32:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 404 Not Found in 17ms (Views: 0.9ms | ActiveRecord: 13.7ms | Allocations: 697)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:11:21 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"nombre"=>"La famosa", "precio"=>5000, "ingrediente"=>{"nombre"=>"La famosa"}}
+  [1m[36mIngrediente Load (8.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.43ms)
+Completed 200 OK in 73ms (Views: 59.1ms | ActiveRecord: 28.7ms | Allocations: 4730)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:14:03 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:14:03.360212"], ["updated_at", "2020-04-27 20:14:03.360212"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 201 Created in 20ms (Views: 0.7ms | ActiveRecord: 12.7ms | Allocations: 5685)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:14:07 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 400 Bad Request in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:14:14 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (7.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (24.2ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:14:14.752729"], ["updated_at", "2020-04-27 20:14:14.752729"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 32.9ms | Allocations: 2238)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "ingredientes_pkey"
+DETAIL:  Key (id)=(1) already exists.
+):
+  
+app/controllers/ingredientes_controller.rb:9:in `create'
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:14:59 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (3.5ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:14:59.889288"], ["updated_at", "2020-04-27 20:14:59.889288"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 10.3ms | Allocations: 5531)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "ingredientes_pkey"
+DETAIL:  Key (id)=(1) already exists.
+):
+  
+app/controllers/ingredientes_controller.rb:9:in `create'
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:15:21 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:15:21.625927"], ["updated_at", "2020-04-27 20:15:21.625927"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 4.1ms | Allocations: 5531)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "ingredientes_pkey"
+DETAIL:  Key (id)=(1) already exists.
+):
+  
+app/controllers/ingredientes_controller.rb:9:in `create'
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:15:40 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (2.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:15:40.822459"], ["updated_at", "2020-04-27 20:15:40.822459"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+Completed 500 Internal Server Error in 68ms (ActiveRecord: 31.5ms | Allocations: 6013)
+
+
+  
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "ingredientes_pkey"
+DETAIL:  Key (id)=(1) already exists.
+):
+  
+app/controllers/ingredientes_controller.rb:9:in `create'
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:17:20 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (14.1ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:17:21.167203"], ["updated_at", "2020-04-27 20:17:21.167203"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.54ms)
+Completed 400 Bad Request in 83ms (Views: 9.0ms | ActiveRecord: 30.3ms | Allocations: 6090)
+
+
+Started POST "/ingrediente/1" for ::1 at 2020-04-27 16:17:30 -0400
+  
+ActionController::RoutingError (No route matches [POST] "/ingrediente/1"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:17:41 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (33.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:17:41.148616"], ["updated_at", "2020-04-27 20:17:41.148616"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 400 Bad Request in 42ms (Views: 0.8ms | ActiveRecord: 35.5ms | Allocations: 2406)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:17:47 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.9ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso Americano"], ["descripcion", "Queso de la mejor calidad"], ["created_at", "2020-04-27 20:17:47.193298"], ["updated_at", "2020-04-27 20:17:47.193298"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (3.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.31ms)
+Completed 400 Bad Request in 13ms (Views: 1.5ms | ActiveRecord: 5.5ms | Allocations: 2391)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:17:52 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso Americano", "descripcion"=>"Queso de la mejor calidad"}}
+  [1m[36mIngrediente Load (1.0ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 29ms (Views: 28.1ms | ActiveRecord: 1.0ms | Allocations: 3738)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:18:24 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>2, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>2, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (191.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (2.7ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["nombre", "Tomate"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 20:18:24.834034"], ["updated_at", "2020-04-27 20:18:24.834034"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 201 Created in 207ms (Views: 0.5ms | ActiveRecord: 200.7ms | Allocations: 2247)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:18:35 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>3, "nombre"=>"Tomate cherry", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>3, "nombre"=>"Tomate cherry", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.9ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["nombre", "Tomate cherry"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 20:18:35.378744"], ["updated_at", "2020-04-27 20:18:35.378744"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 19ms (Views: 0.6ms | ActiveRecord: 9.6ms | Allocations: 2243)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 16:18:45 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.0ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 4], ["nombre", "Lechuguga"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 20:18:45.818785"], ["updated_at", "2020-04-27 20:18:45.818785"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (24.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 201 Created in 34ms (Views: 0.6ms | ActiveRecord: 27.7ms | Allocations: 2242)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:18:48 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (2.2ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.91ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 2.2ms | Allocations: 1540)
+
+
+Started GET "/ingrediente/4" for ::1 at 2020-04-27 16:19:53 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"4", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"4", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:24:in `show'
+[active_model_serializers] Rendered IngredienteSerializer with ActiveModelSerializers::Adapter::Attributes (0.7ms)
+Completed 200 OK in 36ms (Views: 3.2ms | ActiveRecord: 14.4ms | Allocations: 4788)
+
+
+Started GET "/ingrediente/40" for ::1 at 2020-04-27 16:19:58 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"40", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"40", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 4ms (Views: 1.0ms | ActiveRecord: 0.6ms | Allocations: 834)
+
+
+Started GET "/ingrediente/hola" for ::1 at 2020-04-27 16:20:01 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.7ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:24:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 3ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 696)
+
+
+Started DELETE "/ingrediente/4" for ::1 at 2020-04-27 16:20:32 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"4", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"4", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.7ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:32:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:33:in `destroy'
+  [1m[36mIngrediente Destroy (1.5ms)[0m  [1m[31mDELETE FROM "ingredientes" WHERE "ingredientes"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/ingredientes_controller.rb:33:in `destroy'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:33:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 200 OK in 25ms (Views: 0.6ms | ActiveRecord: 12.5ms | Allocations: 5877)
+
+
+Started DELETE "/ingrediente/40" for ::1 at 2020-04-27 16:20:35 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"id"=>"40", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"40", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (1.1ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:32:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 404 Not Found in 4ms (Views: 1.1ms | ActiveRecord: 1.1ms | Allocations: 694)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:22:15 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (1.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+Completed 200 OK in 25ms (Views: 18.4ms | ActiveRecord: 8.9ms | Allocations: 5019)
+
+
+Started GET "/hamburguesa/hola" for ::1 at 2020-04-27 16:31:21 -0400
+  
+SyntaxError (/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:31: syntax error, unexpected rescue, expecting end
+    rescue ActiveRecord::RecordNotFound
+    ^~~~~~
+/Users/Berni/Desktop/Intento/myapi/app/controllers/hamburguesas_controller.rb:91: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/hamburguesas_controller.rb:31: syntax error, unexpected rescue, expecting end
+app/controllers/hamburguesas_controller.rb:91: syntax error, unexpected end-of-input, expecting end
+app/controllers/hamburguesas_controller.rb:31: syntax error, unexpected rescue, expecting end
+app/controllers/hamburguesas_controller.rb:91: syntax error, unexpected end-of-input, expecting end
+Started GET "/hamburguesa/hola" for ::1 at 2020-04-27 16:31:38 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 400 Bad Request in 2ms (Views: 1.3ms | ActiveRecord: 58.1ms | Allocations: 367)
+
+
+Started GET "/hamburguesa/hola" for ::1 at 2020-04-27 16:31:48 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.17ms)
+Completed 400 Bad Request in 3ms (Views: 2.1ms | ActiveRecord: 4.6ms | Allocations: 368)
+
+
+Started GET "/ingrediente/hola" for ::1 at 2020-04-27 16:32:39 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.96ms)
+Completed 400 Bad Request in 9ms (Views: 7.0ms | ActiveRecord: 3.7ms | Allocations: 362)
+
+
+Started GET "/ingrediente/1" for ::1 at 2020-04-27 16:32:43 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 400 Bad Request in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 203)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:32:59 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (14.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.33ms)
+Completed 200 OK in 60ms (Views: 23.0ms | ActiveRecord: 36.3ms | Allocations: 5050)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 16:33:42 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 18ms (Views: 14.3ms | ActiveRecord: 5.5ms | Allocations: 5019)
+
+
+Started GET "/ingrediente/1" for ::1 at 2020-04-27 16:33:45 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 400 Bad Request in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 342)
+
+
+Started GET "/ingrediente/1" for ::1 at 2020-04-27 16:34:35 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:25:in `show'
+[active_model_serializers] Rendered IngredienteSerializer with ActiveModelSerializers::Adapter::Attributes (1.57ms)
+Completed 200 OK in 16ms (Views: 7.5ms | ActiveRecord: 9.3ms | Allocations: 4456)
+
+
+Started GET "/ingrediente/hola" for ::1 at 2020-04-27 16:34:39 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 108)
+
+
+  
+ArgumentError (invalid value for Integer(): "hola"):
+  
+app/controllers/ingredientes_controller.rb:24:in `Integer'
+app/controllers/ingredientes_controller.rb:24:in `show'
+Started GET "/ingrediente/hola" for ::1 at 2020-04-27 16:35:04 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 400 Bad Request in 4ms (Views: 2.0ms | ActiveRecord: 9.1ms | Allocations: 371)
+
+
+Started GET "/hamburguesa/hola" for ::1 at 2020-04-27 16:35:57 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"hola", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.36ms)
+Completed 400 Bad Request in 3ms (Views: 2.3ms | ActiveRecord: 2.8ms | Allocations: 372)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 16:36:00 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (13.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+Completed 404 Not Found in 33ms (Views: 1.0ms | ActiveRecord: 26.9ms | Allocations: 870)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 16:36:07 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.75ms)
+Completed 200 OK in 30ms (Views: 28.5ms | ActiveRecord: 1.0ms | Allocations: 6439)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 16:36:14 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"3", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"3", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.46ms)
+Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 803)
+
+
