@@ -78,6 +78,7 @@ class HamburguesasController < ApplicationController
   def destroy
     if Hamburguesa.exists?(id: params[:id])
       @hamburguesa = Hamburguesa.find(params[:id])
+      IngredienteEnHamburguesa.where(hamburguesa_id: @hamburguesa.id).destroy_all # Elimino todos sus ingredientes asociados
       @hamburguesa.destroy
       render json: {code:200, description: "hamburguesa eliminada"}, status: 200
     else
