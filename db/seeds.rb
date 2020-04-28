@@ -79,7 +79,7 @@ ingredientes = Ingrediente.create([
     descripcion: "De la mejor calidad"
   },
   {
-    id: 3, 
+    id: 3,
     nombre: "Tomate",
     descripcion: "De la mejor calidad"
   },
@@ -116,6 +116,56 @@ ingredientes = Ingrediente.create([
   {
     id: 10,
     nombre: "Palta",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 11,
+    nombre: "Salsa Big Mac",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 12,
+    nombre: "Aceitunas",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 13,
+    nombre: "Ají verde",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 14,
+    nombre: "Papas hilo",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 15,
+    nombre: "Hamburguesa de Falafel",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 16,
+    nombre: "Hamburguesa de carne",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 17,
+    nombre: "Cebolla caramelizada",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 18,
+    nombre: "Pan",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 19,
+    nombre: "Queso azul",
+    descripcion: "De la mejor calidad"
+  },
+  {
+    id: 20,
+    nombre: "Hamburguesa de Lentejas",
     descripcion: "De la mejor calidad"
   }
   ])
