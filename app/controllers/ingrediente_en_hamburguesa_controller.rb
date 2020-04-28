@@ -11,7 +11,7 @@ class IngredienteEnHamburguesaController < ApplicationController
             @ingrediente_en_hamburguesa = IngredienteEnHamburguesa.create(
                                               hamburguesa_id: params[:id_h],
                                               ingrediente_id: params[:id_i],
-                                              path: "https://hamburgueseria.com/ingrediente/#{id_ingrediente}",
+                                              path: "https://hamburgueseria-mbvanwersch.herokuapp.com/ingrediente/#{id_ingrediente}",
                                               )
             render json: {code: 200, description: "operacion exitosa"}, status: 200
           end
