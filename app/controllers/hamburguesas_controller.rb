@@ -42,28 +42,44 @@ class HamburguesasController < ApplicationController
       @hamburguesa = Hamburguesa.find(params[:id])
       contador = 0
       if (params[:nombre])
+        if params[:nombre].blank?
+          render json: {code: 400, description: "parametros invalidos"}, status: 400
+        else
           @hamburguesa.update(
                           nombre: params[:nombre]
                           )
           contador = contador + 1
+        end
       end
       if (params[:precio])
+        if params[:precio].blank?
+          render json: {code: 400, description: "parametros invalidos"}, status: 400
+        else
           @hamburguesa.update(
                           precio: params[:precio]
                           )
           contador = contador + 1
+        end
       end
       if (params[:descripcion])
+        if params[:descripcion].blank?
+          render json: {code: 400, description: "parametros invalidos"}, status: 400
+        else
           @hamburguesa.update(
                               descripcion: params[:descripcion]
                               )
-         contador = contador + 1
+          contador = contador + 1
+        end
       end
       if (params[:imagen])
+        if params[:imagen].blank?
+          render json: {code: 400, description: "parametros invalidos"}, status: 400
+        else
           @hamburguesa.update(
                               imagen: params[:imagen]
                               )
           contador = contador + 1
+        end
       end
       if contador == 0
         render json: {code: 400, description: "parametros invalidos"}, status: 400
