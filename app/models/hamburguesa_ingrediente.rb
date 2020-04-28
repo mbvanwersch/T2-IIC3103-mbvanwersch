@@ -1,2 +1,0 @@
-class HamburguesaIngrediente < ApplicationRecord
-end

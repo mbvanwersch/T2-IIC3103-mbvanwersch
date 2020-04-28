@@ -1,15 +1,15 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  id_hamburguesa: 1
   nombre: MyString
   precio: 1
   descripcion: MyText
   imagen: MyText
+  ingredientes: 
 
 two:
-  id_hamburguesa: 1
   nombre: MyString
   precio: 1
   descripcion: MyText
   imagen: MyText
+  ingredientes: 

@@ -6,8 +6,8 @@ Rails.application.routes.draw do
  patch '/hamburguesa/:id' => 'hamburguesas#update'
  delete '/hamburguesa/:id' => 'hamburguesas#destroy'
 
- put '/hamburguesa/:id/ingrediente/:id' => 'hamburguesas#update_ingrediente'
- delete '/hamburguesa/:id/ingrediente/:id' => 'hamburguesas#destroy_ingrediente'
+ put '/hamburguesa/:id_h/ingrediente/:id_i' => 'ingrediente_en_hamburguesa#create'
+ delete '/hamburguesa/:id_h/ingrediente/:id_i' => 'ingrediente_en_hamburguesa#destroy'
 
  get '/ingrediente' => 'ingredientes#index'
  post '/ingrediente' => 'ingredientes#create'

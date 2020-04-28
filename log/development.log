@@ -1446,3 +1446,1639 @@ Processing by HamburguesasController#show as */*
 Completed 200 OK in 6ms (Views: 1.1ms | ActiveRecord: 1.0ms | Allocations: 803)
 
 
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (12.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixColumnName (20200427212406)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "HamburguesaIngredientes" RENAME COLUMN "id_ingrediente_integer" TO "id_ingrediente"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to FixColumnName (20200427212406)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "hamburguesa_ingredientes" RENAME COLUMN "id_ingrediente_integer" TO "id_ingrediente"[0m
+  [1m[36mprimary::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427212406"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to ChangeDataTypeForId (20200427212607)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.4ms)[0m  [1m[35mALTER TABLE "hamburguesa_ingredientes" ALTER COLUMN "id_ingrediente" TYPE integer[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427213007)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427213007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (32.6ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" text, "imagen" text, "ingredientes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427213007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (28.7ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" text, "imagen" text, "ingredientes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (50.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapi_development"[0m
+  [1m[35m (49.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapi_test"[0m
+  [1m[35m (290.5ms)[0m  [1m[35mCREATE DATABASE "myapi_development" ENCODING = 'unicode'[0m
+  [1m[35m (150.0ms)[0m  [1m[35mCREATE DATABASE "myapi_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427213007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.2ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" text, "imagen" text, "ingredientes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427213007"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateIngredientes (20200427213107)
+  [1m[35m (5.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (14.9ms)[0m  [1m[35mCREATE TABLE "ingredientes" ("id" bigserial primary key, "nombre" character varying, "descripcion" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427213107"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateIngredienteEnHamburguesas (20200427213142)
+  [1m[35m (6.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "ingrediente_en_hamburguesas" ("id" bigserial primary key, "id_h" integer, "id_i" integer, "path" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427213142"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-27 21:35:30.991452"], ["updated_at", "2020-04-27 21:35:30.991452"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:38:43 -0400
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+Completed 500 Internal Server Error in 274ms (ActiveRecord: 2.9ms | Allocations: 70914)
+
+
+  
+NameError (undefined local variable or method `id_ingrediente' for #<IngredienteEnHamburguesaController:0x00007fad80715ec8>):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:6:in `create'
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:39:14 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (13.8ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:39:14.666845"], ["updated_at", "2020-04-27 21:39:14.666845"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.16ms)
+Completed 200 OK in 56ms (Views: 3.6ms | ActiveRecord: 46.8ms | Allocations: 6401)
+
+
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:40:57 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.6ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:40:57.781941"], ["updated_at", "2020-04-27 21:40:57.781941"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[36mHamburguesa Load (2.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:8:in `create'
+Completed 404 Not Found in 142ms (ActiveRecord: 36.6ms | Allocations: 7090)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hamburguesa with 'id'=3):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:8:in `create'
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:42:41 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (2.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (13.5ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:42:42.024094"], ["updated_at", "2020-04-27 21:42:42.024094"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `create'
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.39ms)
+Completed 400 Bad Request in 83ms (Views: 3.5ms | ActiveRecord: 68.3ms | Allocations: 6954)
+
+
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:45:07 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:45:07.590973"], ["updated_at", "2020-04-27 21:45:07.590973"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[35m (4.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[36mHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `find_hamburguesa'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.18ms)
+  [1m[36mIngrediente Load (20.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:11:in `find_ingrediente'
+Completed 500 Internal Server Error in 95ms (Views: 1.6ms | ActiveRecord: 40.4ms | Allocations: 8166)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:15:in `rescue in find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:10:in `find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:26:in `create'
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:45:32 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (1.2ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:45:32.198916"], ["updated_at", "2020-04-27 21:45:32.198916"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:20:in `create'
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `find_hamburguesa'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:11:in `find_ingrediente'
+Completed 500 Internal Server Error in 71ms (Views: 10.5ms | ActiveRecord: 24.9ms | Allocations: 8110)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:15:in `rescue in find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:10:in `find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:26:in `create'
+Started PUT "/hamburguesa/3/ingrediente/1" for ::1 at 2020-04-27 17:46:44 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "id_h"=>"3", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>4}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (1.6ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 3], ["id_i", 1], ["path", "https://hamburgueseria.com/ingrediente/1"], ["created_at", "2020-04-27 21:46:44.412660"], ["updated_at", "2020-04-27 21:46:44.412660"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:3:in `find_hamburguesa'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:10:in `find_ingrediente'
+Completed 500 Internal Server Error in 73ms (Views: 1.8ms | ActiveRecord: 30.8ms | Allocations: 8108)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:13:in `rescue in find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:9:in `find_ingrediente'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+Started GET "/hamburguesa" for ::1 at 2020-04-27 17:48:03 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.21ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 6.2ms | Allocations: 1761)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 17:48:39 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>4, "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (0.11ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 4.4ms | Allocations: 990)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-27 17:49:06 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 404 Not Found in 10ms (Views: 0.8ms | ActiveRecord: 5.5ms | Allocations: 980)
+
+
+Started GET "/hamburguesa/3" for ::1 at 2020-04-27 17:49:11 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"3", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"3", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 3ms (Views: 0.7ms | ActiveRecord: 0.4ms | Allocations: 726)
+
+
+Started GET "/hamburguesa/2" for ::1 at 2020-04-27 17:49:14 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"2", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"2", "nombre"=>"Lechuguga", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.26ms)
+Completed 404 Not Found in 4ms (Views: 0.8ms | ActiveRecord: 0.8ms | Allocations: 709)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:49:31 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Lechuga", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Lechuga", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (17.9ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Lechuga"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:49:31.316219"], ["updated_at", "2020-04-27 21:49:31.316219"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 201 Created in 28ms (Views: 0.4ms | ActiveRecord: 23.3ms | Allocations: 5060)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:49:37 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>1, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>1, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (12.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (2.5ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Tomate"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:49:38.060151"], ["updated_at", "2020-04-27 21:49:38.060151"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 400 Bad Request in 20ms (Views: 0.8ms | ActiveRecord: 14.9ms | Allocations: 2389)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:49:43 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>2, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>2, "nombre"=>"Tomate", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (2.2ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["nombre", "Tomate"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:49:43.269035"], ["updated_at", "2020-04-27 21:49:43.269035"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.27ms)
+Completed 201 Created in 18ms (Views: 2.1ms | ActiveRecord: 9.3ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:49:50 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>3, "nombre"=>"Queso cheddar", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>3, "nombre"=>"Queso cheddar", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (3.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["nombre", "Queso cheddar"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:49:50.408857"], ["updated_at", "2020-04-27 21:49:50.408857"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 201 Created in 22ms (Views: 0.6ms | ActiveRecord: 13.5ms | Allocations: 2253)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:49:56 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>4, "nombre"=>"Queso americano", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>4, "nombre"=>"Queso americano", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (2.1ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 4], ["nombre", "Queso americano"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:49:56.254049"], ["updated_at", "2020-04-27 21:49:56.254049"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 201 Created in 24ms (Views: 1.3ms | ActiveRecord: 13.1ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:03 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"Queso brie", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"Queso brie", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (18.2ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Queso brie"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:03.738571"], ["updated_at", "2020-04-27 21:50:03.738571"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 201 Created in 30ms (Views: 0.6ms | ActiveRecord: 24.5ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:16 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>6, "nombre"=>"Pan", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>6, "nombre"=>"Pan", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (18.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.1ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 6], ["nombre", "Pan"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:16.124815"], ["updated_at", "2020-04-27 21:50:16.124815"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 201 Created in 35ms (Views: 0.7ms | ActiveRecord: 25.7ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:23 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>7, "nombre"=>"Mayonesa", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>7, "nombre"=>"Mayonesa", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (0.4ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 7], ["nombre", "Mayonesa"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:23.889214"], ["updated_at", "2020-04-27 21:50:23.889214"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 2.1ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:30 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>8, "nombre"=>"Ketchup", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>8, "nombre"=>"Ketchup", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (2.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (10.9ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 8], ["nombre", "Ketchup"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:30.047880"], ["updated_at", "2020-04-27 21:50:30.047880"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 201 Created in 28ms (Views: 0.7ms | ActiveRecord: 19.7ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:35 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>9, "nombre"=>"Mostaza", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>9, "nombre"=>"Mostaza", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (4.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (1.0ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 9], ["nombre", "Mostaza"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:35.401471"], ["updated_at", "2020-04-27 21:50:35.401471"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 201 Created in 17ms (Views: 0.5ms | ActiveRecord: 11.7ms | Allocations: 2250)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-27 17:50:42 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>10, "nombre"=>"Tocino", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>10, "nombre"=>"Tocino", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[36mIngrediente Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 10], ["nombre", "Tocino"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-27 21:50:42.447070"], ["updated_at", "2020-04-27 21:50:42.447070"]]
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.48ms)
+Completed 201 Created in 20ms (Views: 2.2ms | ActiveRecord: 11.5ms | Allocations: 2250)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-27 17:50:46 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"id"=>10, "nombre"=>"Tocino", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>10, "nombre"=>"Tocino", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Load (8.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 42ms (Views: 33.1ms | ActiveRecord: 8.6ms | Allocations: 3844)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:13 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"De la casa", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (1.7ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "De la casa"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:13.405302"], ["updated_at", "2020-04-27 21:51:13.405302"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 201 Created in 30ms (Views: 0.6ms | ActiveRecord: 13.9ms | Allocations: 6735)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:20 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Juicy Lucy", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Juicy Lucy", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (16.2ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Juicy Lucy"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:20.844695"], ["updated_at", "2020-04-27 21:51:20.844695"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 48ms (Views: 0.6ms | ActiveRecord: 37.2ms | Allocations: 2281)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:27 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"La maestranza", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La maestranza", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (2.8ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "La maestranza"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:27.813414"], ["updated_at", "2020-04-27 21:51:27.813414"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 201 Created in 12ms (Views: 0.4ms | ActiveRecord: 5.0ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:32 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Topo burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Topo burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (1.2ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Topo burger"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:32.778353"], ["updated_at", "2020-04-27 21:51:32.778353"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 201 Created in 19ms (Views: 0.9ms | ActiveRecord: 8.5ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:40 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Buenisima", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Buenisima", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (1.1ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Buenisima"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:40.585806"], ["updated_at", "2020-04-27 21:51:40.585806"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 201 Created in 23ms (Views: 0.6ms | ActiveRecord: 9.1ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:43 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Burger", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (32.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Burger"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:43.305115"], ["updated_at", "2020-04-27 21:51:43.305115"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 201 Created in 43ms (Views: 0.6ms | ActiveRecord: 36.4ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:51:47 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Berni", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Berni", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (7.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (0.9ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Berni"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:51:47.388988"], ["updated_at", "2020-04-27 21:51:47.388988"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 201 Created in 29ms (Views: 0.6ms | ActiveRecord: 20.1ms | Allocations: 2280)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 17:51:51 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Berni", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Berni", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.44ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.6ms | Allocations: 3611)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:52:02 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Tomi", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Tomi", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Tomi"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:52:02.306926"], ["updated_at", "2020-04-27 21:52:02.306926"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (14.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 201 Created in 22ms (Views: 0.9ms | ActiveRecord: 14.9ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:52:05 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Pedro", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Pedro", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (0.6ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Pedro"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:52:05.627928"], ["updated_at", "2020-04-27 21:52:05.627928"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 201 Created in 10ms (Views: 0.9ms | ActiveRecord: 3.1ms | Allocations: 2280)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-27 17:52:10 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (1.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Weno"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-27 21:52:10.557589"], ["updated_at", "2020-04-27 21:52:10.557589"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 19ms (Views: 0.6ms | ActiveRecord: 8.9ms | Allocations: 2280)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-27 17:52:14 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (13.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (2.38ms)
+Completed 200 OK in 45ms (Views: 31.3ms | ActiveRecord: 13.6ms | Allocations: 2515)
+
+
+Started GET "/hamburguesa/5/ingrediente/10" for ::1 at 2020-04-27 17:52:46 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/hamburguesa/5/ingrediente/10"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/hamburguesa/5/ingrediente/10" for ::1 at 2020-04-27 17:53:08 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"5", "id_i"=>"10", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 5], ["id_i", 10], ["path", "https://hamburgueseria.com/ingrediente/10"], ["created_at", "2020-04-27 21:53:08.399159"], ["updated_at", "2020-04-27 21:53:08.399159"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:23:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 29ms (Views: 0.6ms | ActiveRecord: 12.9ms | Allocations: 6671)
+
+
+Started GET "/hamburguesa/5" for ::1 at 2020-04-27 17:53:16 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"5", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (1.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (1.93ms)
+Completed 200 OK in 11ms (Views: 4.4ms | ActiveRecord: 1.7ms | Allocations: 815)
+
+
+Started PUT "/hamburguesa/5/ingrediente/10" for ::1 at 2020-04-27 17:55:10 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"5", "id_i"=>"10", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (41.2ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("id_h", "id_i", "path", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id_h", 5], ["id_i", 10], ["path", "https://hamburgueseria.com/ingrediente/10"], ["created_at", "2020-04-27 21:55:10.954963"], ["updated_at", "2020-04-27 21:55:10.954963"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[35m (10.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:18:in `create'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:23:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+  [1m[36mHamburguesa Update (1.7ms)[0m  [1m[33mUPDATE "hamburguesas" SET "ingredientes" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["ingredientes", "https://hamburgueseria.com/ingrediente/10"], ["updated_at", "2020-04-27 21:55:11.190628"], ["id", 5]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 276ms (Views: 1.5ms | ActiveRecord: 97.0ms | Allocations: 17083)
+
+
+Started GET "/hamburguesa/5" for ::1 at 2020-04-27 17:55:16 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"5", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (0.54ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 1140)
+
+
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnInTable (20200428151628)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.6ms)[0m  [1m[35mALTER TABLE "hamburguesas" DROP COLUMN "ingredientes"[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428151628"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (13.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIngredienteEnHamburguesas (20200428153109)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.5ms)[0m  [1m[35mCREATE TABLE "ingrediente_en_hamburguesas" ("id" bigserial primary key, "ingrediente_id" bigint NOT NULL, "hamburguesa_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1d3a7be128"
+FOREIGN KEY ("ingrediente_id")
+  REFERENCES "ingredientes" ("id")
+, CONSTRAINT "fk_rails_bacab03877"
+FOREIGN KEY ("hamburguesa_id")
+  REFERENCES "hamburguesas" ("id")
+)[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateIngredienteEnHamburguesas (20200428153109)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "ingrediente_en_hamburguesas" ("id" bigserial primary key, "ingrediente_id" bigint NOT NULL, "hamburguesa_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1d3a7be128"
+FOREIGN KEY ("ingrediente_id")
+  REFERENCES "ingredientes" ("id")
+, CONSTRAINT "fk_rails_bacab03877"
+FOREIGN KEY ("hamburguesa_id")
+  REFERENCES "hamburguesas" ("id")
+)[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (35.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapi_development"[0m
+  [1m[35m (108.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "myapi_test"[0m
+  [1m[35m (247.3ms)[0m  [1m[35mCREATE DATABASE "myapi_development" ENCODING = 'unicode'[0m
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE DATABASE "myapi_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHamburguesas (20200427213007)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (22.5ms)[0m  [1m[35mCREATE TABLE "hamburguesas" ("id" bigserial primary key, "nombre" character varying, "precio" integer, "descripcion" text, "imagen" text, "ingredientes" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427213007"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateIngredientes (20200427213107)
+  [1m[35m (6.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (15.1ms)[0m  [1m[35mCREATE TABLE "ingredientes" ("id" bigserial primary key, "nombre" character varying, "descripcion" text, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200427213107"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to RemoveColumnInTable (20200428151628)
+  [1m[35m (6.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "hamburguesas" DROP COLUMN "ingredientes"[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428151628"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateIngredienteEnHamburguesas (20200428153109)
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "ingrediente_en_hamburguesas" ("id" bigserial primary key, "ingrediente_id" bigint NOT NULL, "hamburguesa_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_1d3a7be128"
+FOREIGN KEY ("ingrediente_id")
+  REFERENCES "ingredientes" ("id")
+, CONSTRAINT "fk_rails_bacab03877"
+FOREIGN KEY ("hamburguesa_id")
+  REFERENCES "hamburguesas" ("id")
+)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE  INDEX  "index_ingrediente_en_hamburguesas_on_ingrediente_id" ON "ingrediente_en_hamburguesas"  ("ingrediente_id")[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE  INDEX  "index_ingrediente_en_hamburguesas_on_hamburguesa_id" ON "ingrediente_en_hamburguesas"  ("hamburguesa_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428153109"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddPathToIngredientes (20200428153303)
+  [1m[35m (6.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "ingredientes" ADD "path" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428153303"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-04-28 15:34:21.551337"], ["updated_at", "2020-04-28 15:34:21.551337"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RemoveColumnInTableIngredientes (20200428155804)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "ingredientes" DROP COLUMN "path"[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428155804"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddColumnInTable (20200428155825)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "ingrediente_en_hamburguesas" ADD "path" text[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20200428155825"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(7436529359429107665)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (1.1ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "De la casa"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.975105"], ["updated_at", "2020-04-28 15:59:08.975105"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Juicy Lucy"], ["precio", 7000], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.983008"], ["updated_at", "2020-04-28 15:59:08.983008"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "La maestranza"], ["precio", 6500], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.987614"], ["updated_at", "2020-04-28 15:59:08.987614"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Camarona"], ["precio", 6000], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.992168"], ["updated_at", "2020-04-28 15:59:08.992168"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Al pesto"], ["precio", 8500], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.996119"], ["updated_at", "2020-04-28 15:59:08.996119"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.4ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Top burger"], ["precio", 5000], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:08.999728"], ["updated_at", "2020-04-28 15:59:08.999728"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Italiana"], ["precio", 4500], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:09.003594"], ["updated_at", "2020-04-28 15:59:09.003594"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Holy Moly"], ["precio", 6000], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:09.007080"], ["updated_at", "2020-04-28 15:59:09.007080"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "Mexicana"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:09.010917"], ["updated_at", "2020-04-28 15:59:09.010917"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mHamburguesa Create (0.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "La chilena"], ["precio", 5990], ["descripcion", "Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 15:59:09.014609"], ["updated_at", "2020-04-28 15:59:09.014609"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.7ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 1], ["nombre", "Queso Cheddar"], ["descripcion", "Cheddar de la mejor calidad"], ["created_at", "2020-04-28 15:59:09.028935"], ["updated_at", "2020-04-28 15:59:09.028935"]]
+  [1m[35m (11.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.5ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 2], ["nombre", "Queso Americano"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.045174"], ["updated_at", "2020-04-28 15:59:09.045174"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 3], ["nombre", "Tomate"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.049826"], ["updated_at", "2020-04-28 15:59:09.049826"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 4], ["nombre", "Lechuga"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.053745"], ["updated_at", "2020-04-28 15:59:09.053745"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 5], ["nombre", "Cebolla"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.057786"], ["updated_at", "2020-04-28 15:59:09.057786"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 6], ["nombre", "Salsa BBQ"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.061546"], ["updated_at", "2020-04-28 15:59:09.061546"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 7], ["nombre", "Mayonesa"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.065113"], ["updated_at", "2020-04-28 15:59:09.065113"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 8], ["nombre", "Ketchup"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.068642"], ["updated_at", "2020-04-28 15:59:09.068642"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.3ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 9], ["nombre", "Camarones"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.072005"], ["updated_at", "2020-04-28 15:59:09.072005"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mIngrediente Create (0.6ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 10], ["nombre", "Palta"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 15:59:09.075367"], ["updated_at", "2020-04-28 15:59:09.075367"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/hamburguesa" for ::1 at 2020-04-28 11:59:22 -0400
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (2.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (5.0ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 2]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 3]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (2.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 4]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 5]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 6]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 7]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 8]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.2ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 9]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.2ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (203.81ms)
+Completed 200 OK in 296ms (Views: 274.7ms | ActiveRecord: 24.0ms | Allocations: 28281)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-28 12:00:02 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (2.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.76ms)
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 9.3ms | Allocations: 6781)
+
+
+  
+NoMethodError (undefined method `path' for #<Ingrediente:0x00007fb06b75bc00>):
+  
+app/controllers/ingredientes_controller.rb:4:in `index'
+Started GET "/ingrediente" for ::1 at 2020-04-28 12:00:19 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (1.6ms)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 10.3ms | Allocations: 5225)
+
+
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:00:49 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 22.1ms | Allocations: 133)
+
+
+  
+TypeError (no implicit conversion of nil into String):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:21:in `+'
+app/controllers/ingrediente_en_hamburguesa_controller.rb:21:in `create'
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:03:34 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (6.5ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 1], ["hamburguesa_id", 1], ["created_at", "2020-04-28 16:03:34.888314"], ["updated_at", "2020-04-28 16:03:34.888314"], ["path", "https://hamburgueseria.com/ingrediente/1"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 31.0ms | Allocations: 20098)
+
+
+  
+NoMethodError (undefined method `id_h' for #<IngredienteEnHamburguesa:0x00007fb06b4590e8>):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:04:18 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngrediente Load (2.1ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (1.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (1.8ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 1], ["hamburguesa_id", 1], ["created_at", "2020-04-28 16:04:18.930750"], ["updated_at", "2020-04-28 16:04:18.930750"], ["path", "https://hamburgueseria.com/ingrediente/1"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" INNER JOIN "ingrediente_en_hamburguesas" ON "ingredientes"."id" = "ingrediente_en_hamburguesas"."ingrediente_id" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:26:in `create'
+Completed 500 Internal Server Error in 300ms (ActiveRecord: 57.0ms | Allocations: 22581)
+
+
+  
+ArgumentError (When assigning attributes, you must pass a hash as an argument, Ingrediente passed.):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:26:in `create'
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:06:35 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.9ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 1], ["hamburguesa_id", 1], ["created_at", "2020-04-28 16:06:35.830647"], ["updated_at", "2020-04-28 16:06:35.830647"], ["path", "https://hamburgueseria.com/ingrediente/1"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+  [1m[36mIngrediente Load (3.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 131ms (Views: 21.2ms | ActiveRecord: 38.9ms | Allocations: 19154)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:06:45 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.9ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (11.72ms)
+Completed 200 OK in 24ms (Views: 20.2ms | ActiveRecord: 1.3ms | Allocations: 3402)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:11:49 -0400
+Processing by HamburguesasController#destroy_ingrediente as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+Completed 404 Not Found in 4ms (ActiveRecord: 5.2ms | Allocations: 221)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Hamburguesa without an ID):
+  
+app/controllers/hamburguesas_controller.rb:87:in `destroy_ingrediente'
+Started DELETE "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:12:16 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (1.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngrediente Load (2.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Destroy (1.0ms)[0m  [1m[31mDELETE FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."id" = $1[0m  [["id", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Destroy (2.0ms)[0m  [1m[31mDELETE FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Destroy (0.4ms)[0m  [1m[31mDELETE FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."id" = $1[0m  [["id", 3]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.06ms)
+Completed 200 OK in 156ms (Views: 0.6ms | ActiveRecord: 27.0ms | Allocations: 20041)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:12:23 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (16.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (4.23ms)
+Completed 200 OK in 40ms (Views: 19.8ms | ActiveRecord: 16.4ms | Allocations: 2633)
+
+
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:13:55 -0400
+  
+SyntaxError (/Users/Berni/Desktop/Intento/myapi/app/controllers/ingrediente_en_hamburguesa_controller.rb:39: syntax error, unexpected rescue, expecting end
+      rescue ActiveRecord::RecordNotFound
+      ^~~~~~
+/Users/Berni/Desktop/Intento/myapi/app/controllers/ingrediente_en_hamburguesa_controller.rb:43: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:39: syntax error, unexpected rescue, expecting end
+app/controllers/ingrediente_en_hamburguesa_controller.rb:43: syntax error, unexpected end-of-input, expecting end
+app/controllers/ingrediente_en_hamburguesa_controller.rb:39: syntax error, unexpected rescue, expecting end
+app/controllers/ingrediente_en_hamburguesa_controller.rb:43: syntax error, unexpected end-of-input, expecting end
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:14:07 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngrediente Load (1.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.6ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 1], ["hamburguesa_id", 1], ["created_at", "2020-04-28 16:14:07.864619"], ["updated_at", "2020-04-28 16:14:07.864619"], ["path", "https://hamburgueseria.com/ingrediente/1"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+  [1m[36mIngrediente Load (2.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 107ms (Views: 1.1ms | ActiveRecord: 30.5ms | Allocations: 18983)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:14:14 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (9.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (17.5ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (31.47ms)
+Completed 200 OK in 53ms (Views: 23.1ms | ActiveRecord: 26.9ms | Allocations: 3138)
+
+
+Started PUT "/hamburguesa/1/ingrediente/5" for ::1 at 2020-04-28 12:14:25 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"5", "ingrediente_en_hamburguesa"=>{}}
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngrediente Load (5.0ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (6.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.8ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 5], ["hamburguesa_id", 1], ["created_at", "2020-04-28 16:14:25.726495"], ["updated_at", "2020-04-28 16:14:25.726495"], ["path", "https://hamburgueseria.com/ingrediente/5"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:19:in `create'
+  [1m[36mHamburguesa Load (9.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:24:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:25:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 47ms (Views: 0.6ms | ActiveRecord: 30.5ms | Allocations: 5383)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:14:31 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (35.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (6.94ms)
+Completed 200 OK in 46ms (Views: 7.5ms | ActiveRecord: 35.5ms | Allocations: 2257)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/3" for ::1 at 2020-04-28 12:14:45 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"3", "ingrediente_en_hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2[0m  [["hamburguesa_id", 1], ["ingrediente_id", 3]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:34:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 200 OK in 7ms (Views: 0.6ms | ActiveRecord: 1.8ms | Allocations: 1900)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:15:10 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (17.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (5.4ms)
+Completed 200 OK in 26ms (Views: 5.6ms | ActiveRecord: 18.1ms | Allocations: 2255)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/3" for ::1 at 2020-04-28 12:17:40 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"3", "ingrediente_en_hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 53ms (Views: 0.9ms | ActiveRecord: 17.2ms | Allocations: 11770)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/5" for ::1 at 2020-04-28 12:17:45 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"1", "id_i"=>"5", "ingrediente_en_hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (14.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngrediente Load (1.7ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Load (0.9ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2[0m  [["hamburguesa_id", 1], ["ingrediente_id", 5]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:34:in `destroy'
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:34:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Destroy (2.3ms)[0m  [1m[31mDELETE FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."id" = $1[0m  [["id", 5]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:34:in `destroy'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:34:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 84ms (Views: 0.8ms | ActiveRecord: 26.1ms | Allocations: 7419)
+
+
+Started GET "/hamburguesa/11" for ::1 at 2020-04-28 12:17:51 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.15ms)
+Completed 404 Not Found in 4ms (Views: 1.0ms | ActiveRecord: 0.5ms | Allocations: 725)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:17:54 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (19.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:25:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (7.9ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:26:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (43.3ms)
+Completed 200 OK in 85ms (Views: 56.4ms | ActiveRecord: 27.2ms | Allocations: 3159)
+
+
+Started DELETE "/hamburguesa/11/ingrediente/3" for ::1 at 2020-04-28 12:18:20 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id_h"=>"11", "id_i"=>"3", "ingrediente_en_hamburguesa"=>{}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 400 Bad Request in 3ms (Views: 0.9ms | ActiveRecord: 0.4ms | Allocations: 707)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-28 12:20:08 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.2ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 2]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.2ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 3]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 4]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.9ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 5]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 6]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 7]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 8]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 9]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (68.97ms)
+Completed 200 OK in 95ms (Views: 79.9ms | ActiveRecord: 15.0ms | Allocations: 24461)
+
+
+Started DELETE "/ingrediente/1" for ::1 at 2020-04-28 12:20:21 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"1", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (0.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:36:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."ingrediente_id" = $1 LIMIT $2[0m  [["ingrediente_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:37:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.24ms)
+Completed 409 Conflict in 38ms (Views: 1.9ms | ActiveRecord: 17.8ms | Allocations: 4287)
+
+
+Started DELETE "/ingrediente/2" for ::1 at 2020-04-28 12:20:25 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"2", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (0.6ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:36:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (1.9ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."ingrediente_id" = $1 LIMIT $2[0m  [["ingrediente_id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:37:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:40:in `destroy'
+  [1m[36mIngrediente Destroy (3.9ms)[0m  [1m[31mDELETE FROM "ingredientes" WHERE "ingredientes"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/ingredientes_controller.rb:40:in `destroy'
+  [1m[35m (6.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:40:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 200 OK in 31ms (Views: 0.7ms | ActiveRecord: 13.5ms | Allocations: 2937)
+
+
+Started GET "/ingrediente" for ::1 at 2020-04-28 12:20:29 -0400
+Processing by IngredientesController#index as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (2.0ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes"[0m
+  ↳ app/controllers/ingredientes_controller.rb:4:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.05ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 2.0ms | Allocations: 2302)
+
+
+Started DELETE "/ingrediente/11" for ::1 at 2020-04-28 12:20:44 -0400
+Processing by IngredientesController#destroy as */*
+  Parameters: {"nombre"=>"Weno", "precio"=>5990, "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "id"=>"11", "ingrediente"=>{"nombre"=>"Weno", "descripcion"=>"Exquisita hamburguesa con queso y salsa BBQ, la especialidad de la casa"}}
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:36:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 404 Not Found in 8ms (Views: 3.4ms | ActiveRecord: 0.5ms | Allocations: 703)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-28 12:42:28 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"La mejor", "precio"=>5990, "descripcion"=>"", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La mejor", "precio"=>5990, "descripcion"=>"", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[36mHamburguesa Create (1.3ms)[0m  [1m[32mINSERT INTO "hamburguesas" ("nombre", "precio", "descripcion", "imagen", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["nombre", "La mejor"], ["precio", 5990], ["descripcion", ""], ["imagen", "https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"], ["created_at", "2020-04-28 16:42:28.306263"], ["updated_at", "2020-04-28 16:42:28.306263"]]
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:10:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 201 Created in 21ms (Views: 0.8ms | ActiveRecord: 2.6ms | Allocations: 6429)
+
+
+Started POST "/hamburguesa" for ::1 at 2020-04-28 12:44:57 -0400
+Processing by HamburguesasController#create as */*
+  Parameters: {"nombre"=>"La mejor", "precio"=>5990, "descripcion"=>"", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg", "hamburguesa"=>{"nombre"=>"La mejor", "precio"=>5990, "descripcion"=>"", "imagen"=>"https://cdn.hswstatic.com/gif/cheeseburger-1.jpg"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 400 Bad Request in 2ms (Views: 1.1ms | ActiveRecord: 14.4ms | Allocations: 370)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-28 12:46:16 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>5, "nombre"=>"", "descripcion"=>"Cheddar de la mejor calidad", "ingrediente"=>{"id"=>5, "nombre"=>"", "descripcion"=>"Cheddar de la mejor calidad"}}
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 400 Bad Request in 2ms (Views: 1.1ms | ActiveRecord: 6.2ms | Allocations: 372)
+
+
+Started POST "/ingrediente" for ::1 at 2020-04-28 12:46:33 -0400
+Processing by IngredientesController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingredientes_controller.rb:12:in `create'
+  [1m[36mIngrediente Create (2.2ms)[0m  [1m[32mINSERT INTO "ingredientes" ("id", "nombre", "descripcion", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["id", 11], ["nombre", "Pepinillos"], ["descripcion", "De la mejor calidad"], ["created_at", "2020-04-28 16:46:33.892816"], ["updated_at", "2020-04-28 16:46:33.892816"]]
+  ↳ app/controllers/ingredientes_controller.rb:12:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingredientes_controller.rb:12:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 201 Created in 51ms (Views: 0.6ms | ActiveRecord: 34.0ms | Allocations: 5128)
+
+
+Started PUT "/hamburguesa/2/ingrediente/10" for ::1 at 2020-04-28 12:51:11 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"2", "id_i"=>"10", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 20.3ms | Allocations: 2667)
+
+
+  
+NoMethodError (undefined method `hamburguesa_id' for nil:NilClass):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+Started PUT "/hamburguesa/2/ingrediente/10" for ::1 at 2020-04-28 12:52:30 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"2", "id_i"=>"10", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:9:in `create'
+  [1m[36mIngrediente Load (0.4ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:10:in `create'
+  [1m[36mIngredienteEnHamburguesa Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 2], ["ingrediente_id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:14:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.9ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 10], ["hamburguesa_id", 2], ["created_at", "2020-04-28 16:52:30.614635"], ["updated_at", "2020-04-28 16:52:30.614635"], ["path", "https://hamburgueseria.com/ingrediente/10"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.23ms)
+Completed 200 OK in 145ms (Views: 3.3ms | ActiveRecord: 27.9ms | Allocations: 20890)
+
+
+Started PUT "/hamburguesa/2/ingrediente/8" for ::1 at 2020-04-28 12:52:36 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"2", "id_i"=>"8", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (1.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (5.7ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:9:in `create'
+  [1m[36mIngrediente Load (2.0ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:10:in `create'
+  [1m[36mIngredienteEnHamburguesa Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 2], ["ingrediente_id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:14:in `create'
+  [1m[35m (4.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mIngrediente Load (24.1ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mHamburguesa Load (1.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[36mIngredienteEnHamburguesa Create (0.5ms)[0m  [1m[32mINSERT INTO "ingrediente_en_hamburguesas" ("ingrediente_id", "hamburguesa_id", "created_at", "updated_at", "path") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["ingrediente_id", 8], ["hamburguesa_id", 2], ["created_at", "2020-04-28 16:52:36.753989"], ["updated_at", "2020-04-28 16:52:36.753989"], ["path", "https://hamburgueseria.com/ingrediente/8"]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:17:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 69ms (Views: 0.6ms | ActiveRecord: 43.3ms | Allocations: 7201)
+
+
+Started PUT "/hamburguesa/1/ingrediente/2" for ::1 at 2020-04-28 12:52:43 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"2", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (28.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (31.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:9:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 500 Internal Server Error in 68ms (Views: 0.6ms | ActiveRecord: 60.5ms | Allocations: 2378)
+
+
+  
+NoMethodError (undefined method `id' for nil:NilClass):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:14:in `create'
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:53:33 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:28:in `show'
+  [1m[36mHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:29:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:30:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (15.09ms)
+Completed 200 OK in 38ms (Views: 25.2ms | ActiveRecord: 1.9ms | Allocations: 3729)
+
+
+Started GET "/ingrediente/2" for ::1 at 2020-04-28 12:53:41 -0400
+Processing by IngredientesController#show as */*
+  Parameters: {"id"=>"2", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "ingrediente"=>{"id"=>"2", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mIngrediente Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingredientes_controller.rb:29:in `show'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 404 Not Found in 4ms (Views: 0.7ms | ActiveRecord: 1.1ms | Allocations: 813)
+
+
+Started GET "/hamburguesa/1/ingrediente/2" for ::1 at 2020-04-28 12:56:12 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/hamburguesa/1/ingrediente/2"):
+  
+actionpack (6.0.2.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.2.2) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.2.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.2.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.2.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.2.2) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.2.2) lib/rails/engine.rb:526:in `call'
+puma (4.3.3) lib/puma/configuration.rb:228:in `call'
+puma (4.3.3) lib/puma/server.rb:682:in `handle_request'
+puma (4.3.3) lib/puma/server.rb:472:in `process_client'
+puma (4.3.3) lib/puma/server.rb:328:in `block in run'
+puma (4.3.3) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started PUT "/hamburguesa/1/ingrediente/2" for ::1 at 2020-04-28 12:56:45 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"2", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:6:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 404 Not Found in 37ms (Views: 0.9ms | ActiveRecord: 11.9ms | Allocations: 9024)
+
+
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:56:51 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (22.7ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (13.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:6:in `create'
+  [1m[36mIngrediente Load (0.3ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:7:in `create'
+  [1m[36mIngredienteEnHamburguesa Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 200 OK in 54ms (Views: 0.5ms | ActiveRecord: 39.1ms | Allocations: 5867)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:56:57 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:28:in `show'
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:29:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (3.7ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:30:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (42.99ms)
+Completed 200 OK in 56ms (Views: 38.3ms | ActiveRecord: 12.4ms | Allocations: 7028)
+
+
+Started PUT "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:57:08 -0400
+Processing by IngredienteEnHamburguesaController#create as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:4:in `create'
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:5:in `create'
+  [1m[36mIngrediente Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:6:in `create'
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:7:in `create'
+  [1m[36mIngredienteEnHamburguesa Exists? (4.2ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:8:in `create'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 200 OK in 23ms (Views: 0.8ms | ActiveRecord: 7.4ms | Allocations: 3041)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:57:12 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Exists? (22.4ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:28:in `show'
+  [1m[36mHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:29:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:30:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (4.7ms)
+Completed 200 OK in 31ms (Views: 4.7ms | ActiveRecord: 23.5ms | Allocations: 2743)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/2" for ::1 at 2020-04-28 12:57:26 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"2", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:28:in `destroy'
+  [1m[36mHamburguesa Load (13.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:29:in `destroy'
+  [1m[36mIngrediente Load (34.1ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+Completed 404 Not Found in 57ms (ActiveRecord: 49.3ms | Allocations: 1713)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Ingrediente with 'id'=2):
+  
+app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+Started DELETE "/hamburguesa/1/ingrediente/2" for ::1 at 2020-04-28 12:58:57 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"2", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (2.0ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:28:in `destroy'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:29:in `destroy'
+  [1m[36mIngrediente Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:30:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.14ms)
+Completed 400 Bad Request in 64ms (Views: 1.0ms | ActiveRecord: 15.7ms | Allocations: 9008)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/3" for ::1 at 2020-04-28 12:59:01 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"3", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (19.2ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:28:in `destroy'
+  [1m[36mHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:29:in `destroy'
+  [1m[36mIngrediente Exists? (2.6ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:30:in `destroy'
+  [1m[36mIngrediente Load (0.5ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.08ms)
+Completed 404 Not Found in 46ms (Views: 0.7ms | ActiveRecord: 29.4ms | Allocations: 5862)
+
+
+Started DELETE "/hamburguesa/1/ingrediente/1" for ::1 at 2020-04-28 12:59:06 -0400
+Processing by IngredienteEnHamburguesaController#destroy as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "id_h"=>"1", "id_i"=>"1", "ingrediente_en_hamburguesa"=>{"id"=>11}}
+  [1m[36mHamburguesa Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:28:in `destroy'
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:29:in `destroy'
+  [1m[36mIngrediente Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:30:in `destroy'
+  [1m[36mIngrediente Load (0.7ms)[0m  [1m[34mSELECT "ingredientes".* FROM "ingredientes" WHERE "ingredientes"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:31:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Exists? (1.7ms)[0m  [1m[34mSELECT 1 AS one FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2 LIMIT $3[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:32:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1 AND "ingrediente_en_hamburguesas"."ingrediente_id" = $2[0m  [["hamburguesa_id", 1], ["ingrediente_id", 1]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[36mIngredienteEnHamburguesa Destroy (0.7ms)[0m  [1m[31mDELETE FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."id" = $1[0m  [["id", 4]]
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/ingrediente_en_hamburguesa_controller.rb:33:in `destroy'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.09ms)
+Completed 200 OK in 44ms (Views: 0.5ms | ActiveRecord: 16.6ms | Allocations: 8585)
+
+
+Started GET "/hamburguesa/1" for ::1 at 2020-04-28 12:59:11 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>"1", "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Exists? (1.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:28:in `show'
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:29:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:30:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (4.63ms)
+Completed 200 OK in 15ms (Views: 7.8ms | ActiveRecord: 2.9ms | Allocations: 3227)
+
+
+Started GET "/hamburguesa" for ::1 at 2020-04-28 12:59:17 -0400
+Processing by HamburguesasController#index as */*
+  Parameters: {"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad", "hamburguesa"=>{"id"=>11, "nombre"=>"Pepinillos", "descripcion"=>"De la mejor calidad"}}
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 1]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 2]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (2.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 3]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 4]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 5]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 6]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 7]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 8]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 9]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.7ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 11]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (82.31ms)
+Completed 200 OK in 89ms (Views: 78.7ms | ActiveRecord: 9.8ms | Allocations: 17385)
+
+

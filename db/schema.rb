@@ -10,20 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_04_27_174557) do
+ActiveRecord::Schema.define(version: 2020_04_28_155825) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "hamburguesa_ingredientes", force: :cascade do |t|
-    t.integer "id_hamburguesa"
-    t.string "id_ingrediente_integer"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "hamburguesas", force: :cascade do |t|
-    t.integer "id_hamburguesa"
     t.string "nombre"
     t.integer "precio"
     t.text "descripcion"
@@ -32,12 +24,23 @@ ActiveRecord::Schema.define(version: 2020_04_27_174557) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "ingrediente_en_hamburguesas", force: :cascade do |t|
+    t.bigint "ingrediente_id", null: false
+    t.bigint "hamburguesa_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.text "path"
+    t.index ["hamburguesa_id"], name: "index_ingrediente_en_hamburguesas_on_hamburguesa_id"
+    t.index ["ingrediente_id"], name: "index_ingrediente_en_hamburguesas_on_ingrediente_id"
+  end
+
   create_table "ingredientes", force: :cascade do |t|
-    t.integer "id_ingrediente"
     t.string "nombre"
     t.text "descripcion"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  add_foreign_key "ingrediente_en_hamburguesas", "hamburguesas"
+  add_foreign_key "ingrediente_en_hamburguesas", "ingredientes"
 end
