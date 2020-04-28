@@ -13,7 +13,7 @@ class IngredienteEnHamburguesaController < ApplicationController
                                               ingrediente_id: params[:id_i],
                                               path: "https://hamburgueseria-mbvanwersch.herokuapp.com/ingrediente/#{id_ingrediente}",
                                               )
-            render json: {code: 200, description: "operacion exitosa"}, status: 200
+            render json: {code: 200, description: "Ingrediente agregado"}, status: 200
           end
         else
           render json: {code: 404, description: "Ingrediente inexistente"}, status: 404
