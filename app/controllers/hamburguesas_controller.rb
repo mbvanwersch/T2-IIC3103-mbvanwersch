@@ -41,47 +41,40 @@ class HamburguesasController < ApplicationController
     if Hamburguesa.exists?(id: params[:id])
       @hamburguesa = Hamburguesa.find(params[:id])
       contador = 0
+      presente_en_blanco = 0
       if (params[:nombre])
-        if params[:nombre].blank?
-          render json: {code: 400, description: "parametros invalidos"}, status: 400
-        else
-          @hamburguesa.update(
-                          nombre: params[:nombre]
-                          )
+        if (!params[:nombre].blank?)
+          @hamburguesa.update(nombre: params[:nombre])
           contador = contador + 1
+        else
+          presente_en_blanco = presente_en_blanco + 1
         end
       end
       if (params[:precio])
-        if params[:precio].blank?
-          render json: {code: 400, description: "parametros invalidos"}, status: 400
-        else
-          @hamburguesa.update(
-                          precio: params[:precio]
-                          )
+        if (!params[:precio].blank?)
+          @hamburguesa.update(precio: params[:precio])
           contador = contador + 1
+        else
+          presente_en_blanco = presente_en_blanco + 1
         end
       end
       if (params[:descripcion])
-        if params[:descripcion].blank?
-          render json: {code: 400, description: "parametros invalidos"}, status: 400
-        else
-          @hamburguesa.update(
-                              descripcion: params[:descripcion]
-                              )
+        if (!params[:descripcion].blank?)
+          @hamburguesa.update(descripcion: params[:descripcion])
           contador = contador + 1
+        else
+          presente_en_blanco = presente_en_blanco + 1
         end
       end
       if (params[:imagen])
-        if params[:imagen].blank?
-          render json: {code: 400, description: "parametros invalidos"}, status: 400
-        else
-          @hamburguesa.update(
-                              imagen: params[:imagen]
-                              )
+        if (!params[:imagen].blank?)
+          @hamburguesa.update(imagen: params[:imagen])
           contador = contador + 1
+        else
+          presente_en_blanco = presente_en_blanco + 1
         end
       end
-      if contador == 0
+      if (contador == 0 || presente_en_blanco > 0)
         render json: {code: 400, description: "parametros invalidos"}, status: 400
       else
         render json: @hamburguesa, status: 200

@@ -3082,3 +3082,242 @@ Processing by HamburguesasController#index as */*
 Completed 200 OK in 89ms (Views: 78.7ms | ActiveRecord: 9.8ms | Allocations: 17385)
 
 
+Started GET "/" for ::1 at 2020-04-28 15:12:59 -0400
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HamburguesasController#index as HTML
+  [1m[36mHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas"[0m
+  ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (23.2ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 2]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 3]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 4]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 5]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 6]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 7]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 8]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (12.8ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 9]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 11]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:5:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (105.33ms)
+Completed 200 OK in 213ms (Views: 138.1ms | ActiveRecord: 64.3ms | Allocations: 31789)
+
+
+Started GET "/hamburguesa/10" for ::1 at 2020-04-28 15:13:10 -0400
+Processing by HamburguesasController#show as */*
+  Parameters: {"nombre"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>""}}
+  [1m[36mHamburguesa Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:28:in `show'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:29:in `show'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:30:in `show'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (4.84ms)
+Completed 200 OK in 12ms (Views: 4.7ms | ActiveRecord: 2.4ms | Allocations: 2872)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:13:15 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>""}}
+  [1m[36mHamburguesa Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.13ms)
+Completed 500 Internal Server Error in 14ms (Views: 4.1ms | ActiveRecord: 3.6ms | Allocations: 1741)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/hamburguesas_controller.rb:85:in `update'
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:17:30 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>""}}
+  [1m[36mHamburguesa Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.42ms)
+Completed 500 Internal Server Error in 31ms (Views: 3.0ms | ActiveRecord: 10.3ms | Allocations: 5533)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/hamburguesas_controller.rb:58:in `update'
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:17:37 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"Hola", "id"=>"10", "hamburguesa"=>{"nombre"=>"Hola"}}
+  [1m[36mHamburguesa Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (1.0ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:45:in `update'
+  [1m[36mHamburguesa Update (0.9ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "Hola"], ["updated_at", "2020-04-28 19:17:37.782451"], ["id", 10]]
+  ↳ app/controllers/hamburguesas_controller.rb:45:in `update'
+  [1m[35m (13.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:45:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.19ms)
+Completed 500 Internal Server Error in 31ms (Views: 1.0ms | ActiveRecord: 17.1ms | Allocations: 3796)
+
+
+  
+AbstractController::DoubleRenderError (Render and/or redirect were called multiple times in this action. Please note that you may only call render OR redirect, and at most once per action. Also note that neither redirect nor render terminate execution of the action, so if you want to exit an action after redirecting, you need to do something like "redirect_to(...) and return".):
+  
+app/controllers/hamburguesas_controller.rb:66:in `update'
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:22:17 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"Hola", "id"=>"10", "hamburguesa"=>{"nombre"=>"Hola"}}
+  [1m[36mHamburguesa Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.07ms)
+Completed 400 Bad Request in 19ms (Views: 0.5ms | ActiveRecord: 9.7ms | Allocations: 5743)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:25:48 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"Hola", "id"=>"10", "hamburguesa"=>{"nombre"=>"Hola"}}
+  [1m[36mHamburguesa Exists? (2.5ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (1.8ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (3.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:71:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (29.75ms)
+Completed 200 OK in 119ms (Views: 35.1ms | ActiveRecord: 18.7ms | Allocations: 8401)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:25:54 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>""}}
+  [1m[36mHamburguesa Exists? (2.3ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (1.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.12ms)
+Completed 400 Bad Request in 9ms (Views: 1.0ms | ActiveRecord: 3.9ms | Allocations: 1455)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:26:01 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"L", "id"=>"10", "hamburguesa"=>{"nombre"=>"L"}}
+  [1m[36mHamburguesa Exists? (1.6ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (8.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+  [1m[36mHamburguesa Update (5.8ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "L"], ["updated_at", "2020-04-28 19:26:01.590510"], ["id", 10]]
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (7.7ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:71:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (10.85ms)
+Completed 200 OK in 65ms (Views: 3.9ms | ActiveRecord: 30.1ms | Allocations: 4760)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:26:24 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La clásica", "precio"=>7990, "id"=>"10", "hamburguesa"=>{"nombre"=>"La clásica", "precio"=>7990}}
+  [1m[36mHamburguesa Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+  [1m[36mHamburguesa Update (0.6ms)[0m  [1m[33mUPDATE "hamburguesas" SET "nombre" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["nombre", "La clásica"], ["updated_at", "2020-04-28 19:26:24.193986"], ["id", 10]]
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:46:in `update'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:52:in `update'
+  [1m[36mHamburguesa Update (3.0ms)[0m  [1m[33mUPDATE "hamburguesas" SET "precio" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["precio", 7990], ["updated_at", "2020-04-28 19:26:24.206619"], ["id", 10]]
+  ↳ app/controllers/hamburguesas_controller.rb:52:in `update'
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:52:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (2.0ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:71:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (11.68ms)
+Completed 200 OK in 43ms (Views: 10.8ms | ActiveRecord: 18.6ms | Allocations: 6847)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:26:38 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La clásica", "precio"=>7990, "descripicion"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>"La clásica", "precio"=>7990}}
+  [1m[36mHamburguesa Exists? (1.4ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.4ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (1.1ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:71:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (4.03ms)
+Completed 200 OK in 11ms (Views: 3.5ms | ActiveRecord: 2.9ms | Allocations: 2945)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:26:45 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>""}}
+  [1m[36mHamburguesa Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (21.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.8ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:71:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (3.9ms)
+Completed 200 OK in 32ms (Views: 3.8ms | ActiveRecord: 22.8ms | Allocations: 2946)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:27:51 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>"", "id"=>"10", "hamburguesa"=>{"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>""}}
+  [1m[36mHamburguesa Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (1.2ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.11ms)
+Completed 400 Bad Request in 44ms (Views: 1.1ms | ActiveRecord: 25.6ms | Allocations: 5868)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:28:01 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>"Muy rica, recomendada", "id"=>"10", "hamburguesa"=>{"nombre"=>"La clásica", "precio"=>7990, "descripcion"=>"Muy rica, recomendada"}}
+  [1m[36mHamburguesa Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.6ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/hamburguesas_controller.rb:63:in `update'
+  [1m[36mHamburguesa Update (0.6ms)[0m  [1m[33mUPDATE "hamburguesas" SET "descripcion" = $1, "updated_at" = $2 WHERE "hamburguesas"."id" = $3[0m  [["descripcion", "Muy rica, recomendada"], ["updated_at", "2020-04-28 19:28:01.109293"], ["id", 10]]
+  ↳ app/controllers/hamburguesas_controller.rb:63:in `update'
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/hamburguesas_controller.rb:63:in `update'
+[active_model_serializers]   [1m[36mIngredienteEnHamburguesa Load (0.3ms)[0m  [1m[34mSELECT "ingrediente_en_hamburguesas".* FROM "ingrediente_en_hamburguesas" WHERE "ingrediente_en_hamburguesas"."hamburguesa_id" = $1[0m  [["hamburguesa_id", 10]]
+[active_model_serializers]   ↳ app/controllers/hamburguesas_controller.rb:80:in `update'
+[active_model_serializers] Rendered HamburguesaSerializer with ActiveModelSerializers::Adapter::Attributes (9.06ms)
+Completed 200 OK in 48ms (Views: 28.2ms | ActiveRecord: 10.5ms | Allocations: 6578)
+
+
+Started PATCH "/hamburguesa/10" for ::1 at 2020-04-28 15:28:10 -0400
+Processing by HamburguesasController#update as */*
+  Parameters: {"id"=>"10", "hamburguesa"=>{}}
+  [1m[36mHamburguesa Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:41:in `update'
+  [1m[36mHamburguesa Load (0.5ms)[0m  [1m[34mSELECT "hamburguesas".* FROM "hamburguesas" WHERE "hamburguesas"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/hamburguesas_controller.rb:42:in `update'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.1ms)
+Completed 400 Bad Request in 5ms (Views: 0.6ms | ActiveRecord: 1.2ms | Allocations: 1319)
+
+
