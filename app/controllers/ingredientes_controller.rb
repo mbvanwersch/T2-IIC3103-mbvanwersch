@@ -5,12 +5,11 @@ class IngredientesController < ApplicationController
   end
 
   def create
-    if (params[:id] && params[:nombre] && params[:descripcion])
-      if (params[:id].blank? || params[:nombre].blank? ||  params[:descripcion].blank?)
+    if (params[:nombre] && params[:descripcion])
+      if (params[:nombre].blank? ||  params[:descripcion].blank?)
         render json: {code: 400, description: "input invalido"}, status: 400
       else
         @ingrediente = Ingrediente.create(
-                                        id: params[:id],
                                         nombre: params[:nombre],
                                         descripcion: params[:descripcion],
                                         )
