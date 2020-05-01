@@ -69,102 +69,82 @@ hamburguesas = Hamburguesa.create([
 # Creo Ingredientes
 ingredientes = Ingrediente.create([
   {
-    id: 1,
     nombre: "Queso Cheddar",
     descripcion: "Cheddar de la mejor calidad"
   },
   {
-    id: 2,
     nombre: "Queso Americano",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 3,
     nombre: "Tomate",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 4,
     nombre: "Lechuga",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 5,
     nombre: "Cebolla",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 6,
     nombre: "Salsa BBQ",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 7,
     nombre: "Mayonesa",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 8,
     nombre: "Ketchup",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 9,
     nombre: "Camarones",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 10,
     nombre: "Palta",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 11,
     nombre: "Salsa Big Mac",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 12,
     nombre: "Aceitunas",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 13,
     nombre: "Ají verde",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 14,
     nombre: "Papas hilo",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 15,
     nombre: "Hamburguesa de Falafel",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 16,
     nombre: "Hamburguesa de carne",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 17,
     nombre: "Cebolla caramelizada",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 18,
     nombre: "Pan",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 19,
     nombre: "Queso azul",
     descripcion: "De la mejor calidad"
   },
   {
-    id: 20,
     nombre: "Hamburguesa de Lentejas",
     descripcion: "De la mejor calidad"
   }
