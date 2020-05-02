@@ -6,14 +6,14 @@ class IngredienteEnHamburguesaController < ApplicationController
         if Ingrediente.exists?(id: params[:id_i])
           @ingrediente = Ingrediente.find(params[:id_i])
           if IngredienteEnHamburguesa.exists?(hamburguesa_id: @hamburguesa.id, ingrediente_id: @ingrediente.id)
-            render json: {code: 200, description: "operacion exitosa"}, status: 200
+            render json: {code: 201, description: "operacion exitosa"}, status: 201
           else
             @ingrediente_en_hamburguesa = IngredienteEnHamburguesa.create(
                                               hamburguesa_id: params[:id_h],
                                               ingrediente_id: params[:id_i],
                                               path: "https://hamburgueseria-mbvanwersch.herokuapp.com/ingrediente/#{id_ingrediente}",
                                               )
-            render json: {code: 200, description: "Ingrediente agregado"}, status: 200
+            render json: {code: 201, description: "Ingrediente agregado"}, status: 201
           end
         else
           render json: {code: 404, description: "Ingrediente inexistente"}, status: 404
