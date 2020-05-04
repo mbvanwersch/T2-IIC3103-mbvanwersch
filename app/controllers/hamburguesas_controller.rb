@@ -10,17 +10,21 @@ class HamburguesasController < ApplicationController
       if (params[:nombre].blank? || params[:precio].blank? || params[:descripcion].blank? || params[:imagen].blank?)
         render json: {code: 400, description: "input invalido"}, status: 400
       else
-        @hamburguesa = Hamburguesa.create(
+        if (Integer(params[:precio]).is_a? Integer)
+          @hamburguesa = Hamburguesa.create(
                                         nombre: params[:nombre],
                                         precio: params[:precio],
                                         descripcion: params[:descripcion],
                                         imagen: params[:imagen],
                                         )
-        render json: @hamburguesa, status: 201
+          render json: @hamburguesa, status: 201
+        end
       end
     else
       render json: {code: 400, description: "input invalido"}, status: 400
     end
+    rescue ArgumentError # no es integer
+      render json: {code: 400, description: "input invalido"}, status: 400
   end
 
   def show
@@ -51,7 +55,7 @@ class HamburguesasController < ApplicationController
         end
       end
       if (params[:precio])
-        if (!params[:precio].blank?)
+        if (!params[:precio].blank? && Integer(params[:precio]).is_a? Integer)
           @hamburguesa.update(precio: params[:precio])
           contador = contador + 1
         else
@@ -82,6 +86,8 @@ class HamburguesasController < ApplicationController
     else
       render json: {code: 404, description: "hamburguesa inexistente"}, status: 404
     end
+    rescue ArgumentError # no es integer
+      render json: {code: 400, description: "parametros invalidos"}, status: 400
   end
 
   def destroy
