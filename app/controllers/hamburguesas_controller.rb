@@ -55,7 +55,7 @@ class HamburguesasController < ApplicationController
         end
       end
       if (params[:precio])
-        if (!params[:precio].blank? && Integer(params[:precio]).is_a? Integer)
+        if (!params[:precio].blank? && (Integer(params[:precio]).is_a? Integer))
           @hamburguesa.update(precio: params[:precio])
           contador = contador + 1
         else
